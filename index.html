@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realluxe.ng | Luxury Fashion Bags - Awka, Nigeria</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0b0b0b',
+                            card: '#161616',
+                            border: '#262626',
+                            purple: '#9b51e0',
+                            purpleHover: '#8a2be2',
+                            lightPurple: '#d4b5ff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom scrollbar and sleek styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0b0b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9b51e0;
+        }
+        .luxury-gradient-text {
+            background: linear-gradient(135deg, #ffffff 30%, #d4b5ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .purple-glow {
+            box-shadow: 0 0 25px rgba(155, 81, 224, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 font-sans antialiased selection:bg-brand-purple selection:text-white">
+
+    <div id="preloader" class="fixed inset-0 z-50 bg-brand-dark flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <div class="w-24 h-24 mb-6 rounded-full bg-brand-card border border-brand-border flex items-center justify-center purple-glow animate-pulse">
+                <img src="c:\Users\USER\Downloads\my business logo 2.jpeg" alt="Realluxe.ng logo" class="w-12 h-12 object-contain rounded-lg" onerror="this.hidden = true; this.nextElementSibling.hidden = false">
+                <svg class="w-12 h-12 text-brand-purple" viewBox="0 0 40 40" fill="none" aria-hidden="true" hidden>
+                    <path d="M11 32V8h11a8 8 0 0 1 0 16H11m11 0 10 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h1 class="font-serif text-2xl tracking-widest text-white mb-2">REALLUXE.NG</h1>
+            <p class="text-xs tracking-[0.3em] text-gray-400 uppercase mb-8">Luxury Fashion Bags</p>
+            <div class="w-48 h-1 bg-brand-border rounded-full overflow-hidden">
+                <div id="loader-bar" class="h-full bg-brand-purple w-0 transition-all duration-500"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="fixed top-0 left-0 right-0 z-40 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-lg bg-brand-card border border-brand-border flex items-center justify-center group-hover:border-brand-purple transition">
+                    <img src="c:\Users\USER\Downloads\my business logo 2.jpeg" alt="Realluxe.ng logo" class="w-7 h-7 object-contain rounded-lg" onerror="this.hidden = true; this.nextElementSibling.hidden = false">
+                    <svg class="w-7 h-7 text-brand-purple" viewBox="0 0 40 40" fill="none" aria-hidden="true" hidden>
+                        <path d="M11 32V8h11a8 8 0 0 1 0 16H11m11 0 10 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-lg font-bold tracking-wider text-white">Realluxe<span class="text-brand-purple">.ng</span></span>
+                    <span class="text-[10px] text-gray-400 tracking-widest uppercase">Luxury Bags</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-sm font-medium text-gray-300 hover:text-brand-purple transition">Home</a>
+                <a href="#collection" class="text-sm font-medium text-gray-300 hover:text-brand-purple transition">Collection</a>
+                <a href="#brands" class="text-sm font-medium text-gray-300 hover:text-brand-purple transition">Brands</a>
+                <a href="#about" class="text-sm font-medium text-gray-300 hover:text-brand-purple transition">About</a>
+                <a href="#reviews" class="text-sm font-medium text-gray-300 hover:text-brand-purple transition">Reviews</a>
+                <a href="#faqs" class="text-sm font-medium text-gray-300 hover:text-brand-purple transition">FAQs</a>
+                <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-brand-purple transition">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleSearch()" class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-gray-300 hover:text-brand-purple hover:border-brand-purple transition" title="Search">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+                <button onclick="toggleCart()" class="relative w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-gray-300 hover:text-brand-purple hover:border-brand-purple transition" title="Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-brand-purple text-white text-[10px] font-bold flex items-center justify-center">0</span>
+                </button>
+                <a href="https://wa.me/2348143278091?text=Hello%20Realluxe.ng,%20I%20would%20like%20to%20inquire%20about%20your%20luxury%20bags." target="_blank" class="hidden sm:inline-flex items-center space-x-2 bg-brand-purple hover:bg-brand-purpleHover text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition shadow-lg shadow-brand-purple/20">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>WhatsApp Order</span>
+                </a>
+                <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-gray-300">
+                    <i class="fa-solid fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-6 py-4 space-y-3">
+            <a href="#home" onclick="toggleMobileMenu()" class="block text-sm font-medium text-gray-300 hover:text-brand-purple py-1">Home</a>
+            <a href="#collection" onclick="toggleMobileMenu()" class="block text-sm font-medium text-gray-300 hover:text-brand-purple py-1">Collection</a>
+            <a href="#brands" onclick="toggleMobileMenu()" class="block text-sm font-medium text-gray-300 hover:text-brand-purple py-1">Brands</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-sm font-medium text-gray-300 hover:text-brand-purple py-1">About</a>
+            <a href="#reviews" onclick="toggleMobileMenu()" class="block text-sm font-medium text-gray-300 hover:text-brand-purple py-1">Reviews</a>
+            <a href="#faqs" onclick="toggleMobileMenu()" class="block text-sm font-medium text-gray-300 hover:text-brand-purple py-1">FAQs</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-sm font-medium text-gray-300 hover:text-brand-purple py-1">Contact</a>
+            <div class="pt-2">
+                <a href="https://wa.me/2348143278091?text=Hello%20Realluxe.ng,%20I%20would%20like%20to%20inquire%20about%20your%20luxury%20bags." target="_blank" class="w-full flex items-center justify-center space-x-2 bg-brand-purple text-white py-2.5 rounded-full text-xs font-semibold uppercase">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div id="search-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-start justify-center pt-24 px-4">
+        <div class="bg-brand-card border border-brand-border w-full max-w-2xl rounded-2xl p-6 shadow-2xl relative">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="font-serif text-lg text-white">Search Luxury Collection</h3>
+                <button onclick="toggleSearch()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="relative">
+                <i class="fa-solid fa-search absolute left-4 top-3.5 text-gray-400"></i>
+                <input type="text" id="search-input" oninput="handleSearch(this.value)" placeholder="Search bags, styles, or designers..." class="w-full bg-brand-dark border border-brand-border rounded-xl pl-11 pr-4 py-3 text-sm text-white focus:outline-none focus:border-brand-purple transition">
+            </div>
+            <div id="search-results" class="mt-4 max-h-60 overflow-y-auto space-y-2"></div>
+        </div>
+    </div>
+
+    <div id="cart-drawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex justify-end">
+        <div id="cart-panel" class="cart-panel bg-brand-card border-l border-brand-border w-full max-w-md h-full flex flex-col p-6 shadow-2xl transform transition-transform duration-300">
+            <div class="flex items-center justify-between pb-4 border-b border-brand-border">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-bag-shopping text-brand-purple"></i>
+                    <h3 class="font-serif text-lg text-white">Your Shopping Bag</h3>
+                </div>
+                <button onclick="toggleCart()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            
+            <div id="cart-items-container" class="flex-1 overflow-y-auto py-4 space-y-4">
+                <div class="text-center text-gray-500 py-12">
+                    <i class="fa-solid fa-bag-shopping text-3xl mb-3"></i>
+                    <p class="text-sm">Your bag is currently empty.</p>
+                </div>
+            </div>
+
+            <div class="pt-4 border-t border-brand-border space-y-4">
+                <div class="flex justify-between text-sm">
+                    <span class="text-gray-400">Subtotal:</span>
+                    <span id="cart-subtotal" class="font-bold text-white">₦0</span>
+                </div>
+                <div class="bg-brand-dark p-3 rounded-xl border border-brand-border text-xs text-gray-400 space-y-1">
+                    <p class="text-brand-purple font-semibold"><i class="fa-solid fa-circle-info mr-1"></i> Order & Payment Note:</p>
+                    <p>Orders are finalized via WhatsApp. We accept <strong>Direct Bank Transfer</strong>.</p>
+                </div>
+                <button onclick="checkoutWhatsApp()" class="w-full bg-brand-purple hover:bg-brand-purpleHover text-white py-3 rounded-xl font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center space-x-2 shadow-lg shadow-brand-purple/20">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Checkout via WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section id="home" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-purple/10 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-brand-card border border-brand-border px-4 py-1.5 rounded-full text-xs text-brand-purple font-medium">
+                        <i class="fa-solid fa-gem"></i>
+                        <span>Awka's Premier Luxury Bag Destination</span>
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+                        Elevate Your Style with <span id="typed-phrase" class="luxury-gradient-text typing-cursor">Timeless Elegance</span>
+                    </h1>
+                    <p class="text-gray-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+                        Discover authentic luxury craftsmanship. Curated designer handbags from Louis Vuitton, Bottega Veneta, Hermès, JW PEI, and Dolce & Gabbana delivered to your doorstep in Anambra and beyond.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
+                        <a href="#collection" class="w-full sm:w-auto bg-brand-purple hover:bg-brand-purpleHover text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wider uppercase transition text-center shadow-xl shadow-brand-purple/30">
+                            Explore Collection
+                        </a>
+                        <a href="https://wa.me/2348143278091?text=Hello%20Realluxe.ng,%20I%20want%20to%20consult%20about%20available%20bags." target="_blank" class="w-full sm:w-auto bg-brand-card hover:bg-brand-border text-gray-200 border border-brand-border px-8 py-4 rounded-full font-semibold text-sm tracking-wider uppercase transition text-center flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-brand-purple text-lg"></i>
+                            <span>Chat With Us</span>
+                        </a>
+                    </div>
+                    
+                    <div class="pt-8 border-t border-brand-border grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-white">100%</p>
+                            <p class="text-xs text-gray-400">Premium Quality</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-white">Awka</p>
+                            <p class="text-xs text-gray-400">Based in Anambra</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-white">Secure</p>
+                            <p class="text-xs text-gray-400">Bank Transfer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-purple to-pink-600 rounded-3xl blur-md opacity-30"></div>
+                        <div class="relative rounded-2xl overflow-hidden border border-brand-border bg-brand-card aspect-[4/5] shadow-2xl">
+                            <img src="https://i.pinimg.com/736x/00/39/d3/0039d336d05f431fbba826706f061d0f.jpg" alt="Luxury Handbag" class="w-full h-full object-cover transform hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+                                <span class="text-xs font-semibold text-brand-purple uppercase tracking-widest mb-1">Featured Masterpiece</span>
+                                <h3 class="font-serif text-xl text-white">Hermès Birkin Classic Edition</h3>
+                                <p class="text-xs text-gray-300 mt-1">Available for instant order via WhatsApp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="brands" class="py-16 bg-brand-card border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xs font-semibold tracking-[0.2em] text-gray-400 uppercase mb-8">Exclusive Designer Houses We Offer</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div onclick="filterCategory('Louis Vuitton')" class="cursor-pointer bg-brand-dark border border-brand-border p-6 rounded-xl hover:border-brand-purple transition group">
+                    <h4 class="font-serif text-lg font-bold text-white group-hover:text-brand-purple transition">Louis Vuitton</h4>
+                    <p class="text-[11px] text-gray-400 mt-1">Monogram & Leather</p>
+                </div>
+                <div onclick="filterCategory('Bottega Veneta')" class="cursor-pointer bg-brand-dark border border-brand-border p-6 rounded-xl hover:border-brand-purple transition group">
+                    <h4 class="font-serif text-lg font-bold text-white group-hover:text-brand-purple transition">Bottega Veneta</h4>
+                    <p class="text-[11px] text-gray-400 mt-1">Intrecciato Weave</p>
+                </div>
+                <div onclick="filterCategory('Hermes')" class="cursor-pointer bg-brand-dark border border-brand-border p-6 rounded-xl hover:border-brand-purple transition group">
+                    <h4 class="font-serif text-lg font-bold text-white group-hover:text-brand-purple transition">Hermès</h4>
+                    <p class="text-[11px] text-gray-400 mt-1">Timeless Luxury</p>
+                </div>
+                <div onclick="filterCategory('JW PEI')" class="cursor-pointer bg-brand-dark border border-brand-border p-6 rounded-xl hover:border-brand-purple transition group">
+                    <h4 class="font-serif text-lg font-bold text-white group-hover:text-brand-purple transition">JW PEI</h4>
+                    <p class="text-[11px] text-gray-400 mt-1">Modern Vegan Chic</p>
+                </div>
+                <div onclick="filterCategory('Dolce & Gabbana')" class="cursor-pointer bg-brand-dark border border-brand-border p-6 rounded-xl hover:border-brand-purple transition group">
+                    <h4 class="font-serif text-lg font-bold text-white group-hover:text-brand-purple transition">Dolce & Gabbana</h4>
+                    <p class="text-[11px] text-gray-400 mt-1">Italian Glamour</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="collection" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-semibold text-brand-purple uppercase tracking-widest">Handcrafted Perfection</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4">The Luxury Bag Collection</h2>
+            <p class="text-gray-400 text-sm">Explore the styles currently featured by Realluxe, choose your favorites, and confirm availability with our WhatsApp concierge.</p>
+            <p id="collection-count" class="text-xs text-gray-500 mt-3" aria-live="polite"></p>
+            
+            <div id="filter-container" class="flex flex-wrap items-center justify-center gap-2 mt-8">
+                <button onclick="filterCategory('All')" class="filter-btn active-filter px-5 py-2 rounded-full text-xs font-medium bg-brand-purple text-white transition">All Collection</button>
+                <button onclick="filterCategory('Louis Vuitton')" class="filter-btn px-5 py-2 rounded-full text-xs font-medium bg-brand-card border border-brand-border text-gray-300 hover:border-brand-purple transition">Louis Vuitton</button>
+                <button onclick="filterCategory('Bottega Veneta')" class="filter-btn px-5 py-2 rounded-full text-xs font-medium bg-brand-card border border-brand-border text-gray-300 hover:border-brand-purple transition">Bottega Veneta</button>
+                <button onclick="filterCategory('Hermes')" class="filter-btn px-5 py-2 rounded-full text-xs font-medium bg-brand-card border border-brand-border text-gray-300 hover:border-brand-purple transition">Hermès</button>
+                <button onclick="filterCategory('JW PEI')" class="filter-btn px-5 py-2 rounded-full text-xs font-medium bg-brand-card border border-brand-border text-gray-300 hover:border-brand-purple transition">JW PEI</button>
+                <button onclick="filterCategory('Dolce & Gabbana')" class="filter-btn px-5 py-2 rounded-full text-xs font-medium bg-brand-card border border-brand-border text-gray-300 hover:border-brand-purple transition">Dolce & Gabbana</button>
+            </div>
+        </div>
+
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
+
+    <section class="py-16 bg-brand-card border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="bg-brand-dark p-8 rounded-2xl border border-brand-border">
+                    <div class="w-12 h-12 rounded-xl bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-brand-purple text-xl mb-4 mx-auto md:mx-0">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">WhatsApp Exclusive Orders</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">All orders and reservations are processed directly through our dedicated WhatsApp concierge for personalized assistance.</p>
+                </div>
+                <div class="bg-brand-dark p-8 rounded-2xl border border-brand-border">
+                    <div class="w-12 h-12 rounded-xl bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-brand-purple text-xl mb-4 mx-auto md:mx-0">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Direct Bank Transfer</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">We accept secure direct bank transfers. Bank account details are provided securely by our team upon order confirmation.</p>
+                </div>
+                <div class="bg-brand-dark p-8 rounded-2xl border border-brand-border">
+                    <div class="w-12 h-12 rounded-xl bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-brand-purple text-xl mb-4 mx-auto md:mx-0">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Swift Delivery in Anambra</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Based in Awka, Anambra State, we offer reliable delivery right to your door within Awka and prompt dispatch nationwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="absolute -inset-2 bg-brand-purple/20 rounded-3xl blur-lg"></div>
+                <div class="relative rounded-2xl overflow-hidden border border-brand-border bg-brand-card aspect-[4/3]">
+                    <img src="https://i.pinimg.com/736x/00/39/d3/0039d336d05f431fbba826706f061d0f.jpg" alt="Luxury Handbags Showcase" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="space-y-6">
+                <span class="text-xs font-semibold text-brand-purple uppercase tracking-widest">About Realluxe.ng</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">The Epitome of Elegance & Luxury in Awka</h2>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Welcome to <strong>Realluxe.ng</strong>, your premier destination for high-end fashion handbags in Awka, Anambra State. We curate the world's most coveted luxury designer handbags—from the timeless sophistication of Hermès and Louis Vuitton to the iconic craftsmanship of Bottega Veneta, JW PEI, and Dolce & Gabbana.
+                </p>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Our mission is to empower fashion enthusiasts with authentic elegance, seamless WhatsApp ordering, and impeccable customer service.
+                </p>
+                <div class="pt-4 flex items-center space-x-6">
+                    <div>
+                        <p class="font-serif text-2xl font-bold text-brand-purple">5+</p>
+                        <p class="text-xs text-gray-400">Designer Brands</p>
+                    </div>
+                    <div class="w-px h-10 bg-brand-border"></div>
+                    <div>
+                        <p class="font-serif text-2xl font-bold text-brand-purple">100%</p>
+                        <p class="text-xs text-gray-400">Verified Quality</p>
+                    </div>
+                    <div class="w-px h-10 bg-brand-border"></div>
+                    <div>
+                        <p class="font-serif text-2xl font-bold text-brand-purple">Awka</p>
+                        <p class="text-xs text-gray-400">Anambra State</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-brand-card border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-semibold text-brand-purple uppercase tracking-widest">Customer Reviews</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4">Your experience matters.</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-lg">We are gathering feedback from Realluxe customers before featuring their words here. If you have shopped with us, tell us how we did and, with your permission, your review can help the next person shop with confidence.</p>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="review-invitation flex flex-col sm:flex-row sm:items-center gap-6 p-6 sm:p-8 rounded-2xl border border-brand-border bg-brand-dark">
+                        <div class="review-mark flex-shrink-0 w-14 h-14 rounded-full border border-brand-purple/40 bg-brand-purple/10 flex items-center justify-center text-brand-purple text-xl" aria-hidden="true">
+                            <i class="fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-xs text-brand-purple font-semibold uppercase tracking-widest mb-2">A note from our customers</p>
+                            <h3 class="font-serif text-xl font-bold text-white mb-2">Have a Realluxe story to share?</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">Send us your honest feedback on the ordering, service, or delivery experience. We will ask before publishing your words.</p>
+                        </div>
+                        <a href="https://wa.me/2348143278091?text=Hello%20Realluxe.ng%2C%20I%20would%20like%20to%20share%20feedback%20about%20my%20experience." target="_blank" rel="noopener noreferrer" class="inline-flex flex-shrink-0 items-center justify-center gap-2 bg-brand-purple hover:bg-brand-purpleHover text-white px-5 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Share feedback</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs" class="py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="text-xs font-semibold text-brand-purple uppercase tracking-widest">A little more information</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4">Frequently asked questions</h2>
+            <p class="text-gray-400 text-sm">The essentials before you choose your next bag.</p>
+        </div>
+        <div class="faq-list divide-y divide-brand-border border-y border-brand-border">
+            <details class="faq-item group py-5">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-sm font-semibold text-white">How do I place an order?<span class="faq-icon text-brand-purple text-xl" aria-hidden="true">+</span></summary>
+                <p class="pt-4 pr-8 text-sm leading-relaxed text-gray-400">Choose a bag from the collection and select Order, or contact our WhatsApp concierge. We will confirm availability, answer your questions, and guide you through the next steps.</p>
+            </details>
+            <details class="faq-item group py-5">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-sm font-semibold text-white">Which payment methods do you accept?<span class="faq-icon text-brand-purple text-xl" aria-hidden="true">+</span></summary>
+                <p class="pt-4 pr-8 text-sm leading-relaxed text-gray-400">Payment is arranged by direct bank transfer after your order details are confirmed with our team. Please request payment details through our official WhatsApp contact.</p>
+            </details>
+            <details class="faq-item group py-5">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-sm font-semibold text-white">Where do you deliver?<span class="faq-icon text-brand-purple text-xl" aria-hidden="true">+</span></summary>
+                <p class="pt-4 pr-8 text-sm leading-relaxed text-gray-400">Realluxe is based in Awka, Anambra State. Delivery options for Awka and other locations in Nigeria can be confirmed with our team when you enquire.</p>
+            </details>
+            <details class="faq-item group py-5">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-sm font-semibold text-white">How can I check a bag's availability or details?<span class="faq-icon text-brand-purple text-xl" aria-hidden="true">+</span></summary>
+                <p class="pt-4 pr-8 text-sm leading-relaxed text-gray-400">Message us on WhatsApp with the bag name. Our team can confirm current availability and provide the details you need before placing an order.</p>
+            </details>
+            <details class="faq-item group py-5">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-sm font-semibold text-white">Can I get help choosing a bag?<span class="faq-icon text-brand-purple text-xl" aria-hidden="true">+</span></summary>
+                <p class="pt-4 pr-8 text-sm leading-relaxed text-gray-400">Of course. Tell our concierge what style or occasion you have in mind, and we will help you explore the available collection.</p>
+            </details>
+        </div>
+        <p class="text-center text-xs text-gray-500 mt-8">Still have a question? <a href="https://wa.me/2348143278091?text=Hello%20Realluxe.ng%2C%20I%20have%20a%20question%20about%20your%20collection." target="_blank" rel="noopener noreferrer" class="text-brand-purple hover:text-brand-lightPurple transition">Chat with our team</a></p>
+    </section>
+
+    <footer id="contact" class="bg-brand-card border-t border-brand-border pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-brand-border">
+                <div class="space-y-4">
+                    <a href="#home" aria-label="Realluxe.ng home" class="flex items-center space-x-3 group">
+                        <div class="w-10 h-10 rounded-lg bg-brand-dark border border-brand-border flex items-center justify-center">
+                            <img src="c:\Users\USER\Downloads\my business logo 2.jpeg" alt="Realluxe.ng logo" class="w-7 h-7 object-contain rounded-lg" onerror="this.hidden = true; this.nextElementSibling.hidden = false">
+                            <svg class="w-7 h-7 text-brand-purple" viewBox="0 0 40 40" fill="none" aria-hidden="true" hidden>
+                                <path d="M11 32V8h11a8 8 0 0 1 0 16H11m11 0 10 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="font-serif text-lg font-bold tracking-wider text-white">Realluxe<span class="text-brand-purple">.ng</span></span>
+                    </a>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Your trusted luxury handbag boutique bringing world-class designer fashion to Awka, Anambra State, Nigeria.
+                    </p>
+                    <div class="flex items-center space-x-3">
+                        <a href="https://wa.me/2348143278091" target="_blank" class="w-9 h-9 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-gray-300 hover:text-brand-purple hover:border-brand-purple transition"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:Realluxe.ng@gmail.com" class="w-9 h-9 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-gray-300 hover:text-brand-purple hover:border-brand-purple transition"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:08143278091" class="w-9 h-9 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-gray-300 hover:text-brand-purple hover:border-brand-purple transition"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="text-gray-400 hover:text-brand-purple transition">Home</a></li>
+                        <li><a href="#collection" class="text-gray-400 hover:text-brand-purple transition">Collection Catalog</a></li>
+                        <li><a href="#brands" class="text-gray-400 hover:text-brand-purple transition">Designer Brands</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-brand-purple transition">About Realluxe</a></li>
+                        <li><a href="#reviews" class="text-gray-400 hover:text-brand-purple transition">Customer Reviews</a></li>
+                        <li><a href="#faqs" class="text-gray-400 hover:text-brand-purple transition">FAQs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-brand-purple transition">Contact & Location</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Designer Brands</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#collection" onclick="filterCategory('Louis Vuitton')" class="text-gray-400 hover:text-brand-purple transition">Louis Vuitton</a></li>
+                        <li><a href="#collection" onclick="filterCategory('Bottega Veneta')" class="text-gray-400 hover:text-brand-purple transition">Bottega Veneta</a></li>
+                        <li><a href="#collection" onclick="filterCategory('Hermes')" class="text-gray-400 hover:text-brand-purple transition">Hermès Paris</a></li>
+                        <li><a href="#collection" onclick="filterCategory('JW PEI')" class="text-gray-400 hover:text-brand-purple transition">JW PEI Bags</a></li>
+                        <li><a href="#collection" onclick="filterCategory('Dolce & Gabbana')" class="text-gray-400 hover:text-brand-purple transition">Dolce & Gabbana</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-sm font-bold text-white uppercase tracking-wider mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-xs text-gray-400">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-brand-purple mt-0.5"></i>
+                            <span>Awka, Anambra State, Nigeria</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone text-brand-purple"></i>
+                            <span>08143278091</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-brand-purple"></i>
+                            <span>Realluxe.ng@gmail.com</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-credit-card text-brand-purple"></i>
+                            <span>Bank Transfer / WhatsApp Order</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+                <p>&copy; 2026 Realluxe.ng. All rights reserved. Luxury Fashion Bags.</p>
+                <p class="mt-2 sm:mt-0">Designed for Realluxe.ng | Awka, Nigeria</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loaderBar = document.getElementById('loader-bar');
+            loaderBar.style.width = '100%';
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 700);
+            }, 600);
+        });
+
+        const products = [
+            {
+                id: 1,
+                name: "Louis Vuitton Neverfull MM",
+                brand: "Louis Vuitton",
+                price: 450000,
+                priceFormatted: "₦45,000",
+                image: "https://i.pinimg.com/736x/f2/81/ab/f281ab89e58f8a3228b16b658d787948.jpg",
+                description: "Iconic monogram canvas with rich leather trim."
+            },
+            {
+                id: 2,
+                name: "Bottega Veneta Cassette Bag",
+                brand: "Bottega Veneta",
+                price: 520000,
+                priceFormatted: "₦15,000",
+                image: "https://i.pinimg.com/736x/eb/f8/d0/ebf8d0efbfdecf8c60331961faa84364.jpg",
+                description: "Padded Intrecciato leather cross-body masterpiece."
+            },
+            {
+                id: 3,
+                name: "Hermès Birkin 35 Black Togo",
+                brand: "Hermes",
+                price: 980000,
+                priceFormatted: "₦25,000",
+                image: "https://i.pinimg.com/736x/4e/63/c0/4e63c0ebe20581cd50b3c4e21c998d8f.jpg",
+                description: "The pinnacle of luxury craftsmanship and prestige."
+            },
+            {
+                id: 4,
+                name: "JW PEI Gabbi Ruched Hobo Bag",
+                brand: "JW PEI",
+                price: 180000,
+                priceFormatted: "₦180,000",
+                image: "https://i.pinimg.com/736x/81/69/8a/81698abc12714860bf4ba2f5eb42cf1e.jpg",
+                description: "Trendy vegan leather ruching for modern style."
+            },
+            {
+                id: 5,
+                name: "Dolce & Gabbana Devotion Bag",
+                brand: "Dolce & Gabbana",
+                price: 610000,
+                priceFormatted: "₦35,000",
+                image: "https://i.pinimg.com/736x/d9/3e/f6/d93ef6b30ed584c2f331407cca05ab6f.jpg",
+                description: "Exquisite quilted nappa leather with sacred heart clasp."
+            },
+            {
+                id: 6,
+                name: "gucci GG Mini Bag",
+                brand: "Gucci",
+                price: 390000,
+                priceFormatted: "₦20,000",
+                image: "https://i.pinimg.com/736x/56/22/95/562295ae3f15773116fdaa92aa947d3e.jpg",
+                description: "Charming structure inspired by Art Deco originals."
+            },
+            {
+                id: 7,
+                name: "Hermès Kelly 28 Bag",
+                brand: "Hermès",
+                price: 480000,
+                priceFormatted: "₦30,000",
+                image: "https://i.pinimg.com/1200x/de/9e/8d/de9e8d7489a0cf5acad20a23e56e3eda.jpg",
+                description: "Sleek knotted handle with Intrecciato leather."
+            },
+            {
+                id: 8,
+                name: "JW PEI red chic Shoulder Bag",
+                brand: "JW PEI",
+                price: 165000,
+                priceFormatted: "₦25,000",
+                image: "https://i.pinimg.com/736x/83/63/33/83633306a4cd478f91781dd5c4a08175.jpg",
+                description: "90s retro style vegan bag in vibrant tones."
+            },
+            {
+                id: 9,
+                name: "yves saint laurent sac de jour",
+                brand: "Yves Saint Laurent",
+                price: 550000,
+                priceFormatted: "₦20,000",
+                image: "https://i.pinimg.com/736x/1c/73/48/1c73489202705dddae4ed0642253f531.jpg",
+                description: "Classic Italian luxury tote with metal logo plaque."
+            }
+        ];
+
+        let cart = [];
+        let currentFilter = 'All';
+
+        function renderProducts(filter = 'All') {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'All' ? products : products.filter(p => p.brand === filter);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-gray-400">No handbags found in this collection.</div>`;
+                return;
+            }
+
+            filtered.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'bg-brand-card border border-brand-border rounded-2xl overflow-hidden group hover:border-brand-purple/50 transition duration-300 flex flex-col';
+                card.innerHTML = `
+                    <div class="relative aspect-[4/3] overflow-hidden bg-brand-dark">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-brand-dark/80 backdrop-blur-md border border-brand-border text-brand-purple text-[10px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider">${product.brand}</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-serif text-lg font-bold text-white">${product.name}</h3>
+                            <p class="text-xs text-gray-400 mt-1 line-clamp-2">${product.description}</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-brand-border">
+                            <span class="font-serif text-lg font-bold text-white">${product.priceFormatted}</span>
+                            <div class="flex space-x-2">
+                                <button onclick="addToCart(${product.id})" class="w-10 h-10 rounded-xl bg-brand-dark border border-brand-border flex items-center justify-center text-gray-300 hover:text-brand-purple hover:border-brand-purple transition" title="Add to Bag">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </button>
+                                <button onclick="orderWhatsApp(${product.id})" class="bg-brand-purple hover:bg-brand-purpleHover text-white px-4 py-2 rounded-xl text-xs font-semibold uppercase transition flex items-center space-x-1.5 shadow-md shadow-brand-purple/20">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                                    <span>Order</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterCategory(category) {
+            currentFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.textContent.includes(category) || (category === 'All' && btn.textContent.includes('All'))) {
+                    btn.className = 'filter-btn px-5 py-2 rounded-full text-xs font-medium bg-brand-purple text-white transition';
+                } else {
+                    btn.className = 'filter-btn px-5 py-2 rounded-full text-xs font-medium bg-brand-card border border-brand-border text-gray-300 hover:border-brand-purple transition';
+                }
+            });
+            renderProducts(category);
+        }
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const existing = cart.find(item => item.id === productId);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            updateCartUI();
+            toggleCart();
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const countEl = document.getElementById('cart-count');
+            const container = document.getElementById('cart-items-container');
+            const subtotalEl = document.getElementById('cart-subtotal');
+
+            const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            countEl.textContent = totalCount;
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center text-gray-500 py-12">
+                        <i class="fa-solid fa-bag-shopping text-3xl mb-3"></i>
+                        <p class="text-sm">Your bag is currently empty.</p>
+                    </div>
+                `;
+                subtotalEl.textContent = '₦0';
+                return;
+            }
+
+            let subtotal = 0;
+            container.innerHTML = '';
+
+            cart.forEach(item => {
+                subtotal += item.price * item.quantity;
+                const div = document.createElement('div');
+                div.className = 'flex items-center space-x-4 bg-brand-dark p-3 rounded-xl border border-brand-border';
+                div.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg">
+                    <div class="flex-1">
+                        <h4 class="font-serif text-sm font-bold text-white">${item.name}</h4>
+                        <p class="text-xs text-brand-purple font-semibold mt-0.5">${item.priceFormatted} x ${item.quantity}</p>
+                    </div>
+                    <button onclick="removeFromCart(${item.id})" class="text-gray-500 hover:text-red-400 p-2"><i class="fa-solid fa-trash"></i></button>
+                `;
+                container.appendChild(div);
+            });
+
+            subtotalEl.textContent = '₦' + subtotal.toLocaleString();
+        }
+
+        function orderWhatsApp(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const message = encodeURIComponent(`Hello Realluxe.ng, I'm interested in ordering the "${product.name}" (${product.priceFormatted}). Please guide me through payment (Bank Transfer) and delivery to Awka / Anambra.`);
+            window.open(`https://wa.me/2348143278091?text=${message}`, '_blank');
+        }
+
+        function checkoutWhatsApp() {
+            if (cart.length === 0) {
+                return;
+            }
+
+            let summary = cart.map(item => `${item.quantity}x ${item.name} (${item.priceFormatted})`).join(', ');
+            let total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const message = encodeURIComponent(`Hello Realluxe.ng, I would like to place an order for the following items:\n\n${summary}\n\nTotal: ₦${total.toLocaleString()}\n\nPlease provide your Bank Transfer details and delivery options to Awka.`);
+            window.open(`https://wa.me/2348143278091?text=${message}`, '_blank');
+        }
+
+        function toggleSearch() {
+            const modal = document.getElementById('search-modal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                document.getElementById('search-input').focus();
+            }
+        }
+
+        function handleSearch(query) {
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+
+            if (!query.trim()) return;
+
+            const matches = products.filter(p => 
+                p.name.toLowerCase().includes(query.toLowerCase()) || 
+                p.brand.toLowerCase().includes(query.toLowerCase())
+            );
+
+            if (matches.length === 0) {
+                resultsContainer.innerHTML = `<p class="text-xs text-gray-400 text-center py-4">No designer bags found matching "${query}".</p>`;
+                return;
+            }
+
+            matches.forEach(product => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center justify-between p-3 bg-brand-dark rounded-xl border border-brand-border hover:border-brand-purple cursor-pointer transition';
+                div.onclick = () => {
+                    toggleSearch();
+                    document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
+                    filterCategory(product.brand);
+                };
+                div.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                        <img src="${product.image}" class="w-10 h-10 object-cover rounded-lg">
+                        <div>
+                            <h4 class="text-xs font-bold text-white">${product.name}</h4>
+                            <p class="text-[10px] text-brand-purple">${product.brand}</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-white">${product.priceFormatted}</span>
+                `;
+                resultsContainer.appendChild(div);
+            });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts('All');
+        });
+    </script>
+    <script src="script.js" defer></script>
+</body>
+</html>

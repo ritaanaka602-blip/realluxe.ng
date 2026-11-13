@@ -1,0 +1,122 @@
+:root {
+    --realluxe-ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+html {
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+.cart-panel {
+    transform: translateX(100%);
+    transition: transform 320ms var(--realluxe-ease);
+}
+
+#cart-drawer:not(.hidden) .cart-panel {
+    transform: translateX(0);
+}
+
+.product-card {
+    animation: product-enter 420ms var(--realluxe-ease) both;
+}
+
+.product-card-image {
+    transition: transform 650ms var(--realluxe-ease);
+}
+
+.product-card:hover .product-card-image {
+    transform: scale(1.045);
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 650ms var(--realluxe-ease), transform 650ms var(--realluxe-ease);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes product-enter {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.typing-cursor {
+    border-right: 2px solid currentColor;
+    padding-right: 0.08em;
+    animation: cursor-blink 0.85s steps(2, start) infinite;
+}
+
+.review-invitation {
+    transition: border-color 220ms var(--realluxe-ease), transform 220ms var(--realluxe-ease), box-shadow 220ms var(--realluxe-ease);
+}
+
+.review-invitation:hover {
+    border-color: rgba(155, 81, 224, 0.55);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item > summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item > summary:focus-visible {
+    outline: 2px solid #9b51e0;
+    outline-offset: 6px;
+}
+
+.faq-icon {
+    transition: transform 220ms var(--realluxe-ease);
+}
+
+.faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item[open] > p {
+    animation: answer-enter 240ms var(--realluxe-ease) both;
+}
+
+@keyframes cursor-blink {
+    to {
+        border-color: transparent;
+    }
+}
+
+@keyframes answer-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
